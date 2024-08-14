@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HelloDR" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.HelloDR" parent="Base.Theme.HelloDR" />
+<!--    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">-->
+
+<!--        <item name="windowSplashScreenBackground">@color/blue</item>-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/frame</item>-->
+<!--        <item name="postSplashScreenTheme">@style/Base.Theme.HelloDR</item>-->
+<!--    </style>-->
+</resources>

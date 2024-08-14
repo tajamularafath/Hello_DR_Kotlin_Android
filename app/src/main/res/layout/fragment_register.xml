@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.RegisterFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_Top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_Bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Register"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_registerDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Please enter the Basic details "
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/tv_register" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/tv_registerDesc" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_layoutName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/viewTextEMail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/EnterName"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:fontFamily="@font/"
+            tools:ignore="RtlCompat,RtlSymmetry" />
+
+<!--            android:text="@={loginVM.loginEmail}"-->
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_moblie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mobile Number"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/card_layoutName" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_layoutMoblie"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_moblie">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/viewTextMoblie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/EnterNumber"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:fontFamily="@font/"
+            tools:ignore="RtlCompat,RtlSymmetry" />
+
+<!--            android:text="@={loginVM.loginEmail}"-->
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Email"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/card_layoutMoblie" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_layoutEmail"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/viewTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/EnterEmailAddress"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:fontFamily="@font/"
+            tools:ignore="RtlCompat,RtlSymmetry" />
+
+<!--            android:text="@={loginVM.loginEmail}"-->
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Password"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/card_layoutEmail" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_layoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/viewTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/EnterPassword"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:fontFamily="@font/"
+            tools:ignore="RtlCompat,RtlSymmetry" />
+
+<!--            android:text="@={loginVM.loginEmail}"-->
+    </androidx.cardview.widget.CardView>
+    <!--    <com.google.android.material.textfield.TextInputEditText-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="#FFFFFF"-->
+    <!--        android:hint="Enter Name"-->
+    <!--        android:textColor="#000000"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/gl_End"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/gl_Start"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tv_name" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/b_register"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/blue"
+        android:text="Register"
+        android:textColor="@color/black"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_layoutPassword"
+        app:shapeAppearance="@null" />
+
+    <TextView
+        android:id="@+id/tv_ihaveacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="I have an Account?"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/gl_Bottom"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="Login"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/gl_Bottom"
+        app:layout_constraintStart_toEndOf="@id/tv_ihaveacc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
