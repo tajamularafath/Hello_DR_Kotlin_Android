@@ -43,4 +43,7 @@
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+
+    <include app:graph="@navigation/nav_graph" />
+
 </navigation>
