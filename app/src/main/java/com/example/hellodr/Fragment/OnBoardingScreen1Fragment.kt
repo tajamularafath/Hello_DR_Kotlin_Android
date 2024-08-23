@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hellodr.R
-import com.example.hellodr.ViewPagerAdapter
+import com.example.hellodr.Adapter.ViewPagerAdapter
 import com.example.hellodr.databinding.FragmentOnBoardingScreen1Binding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator

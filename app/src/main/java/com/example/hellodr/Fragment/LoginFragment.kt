@@ -34,5 +34,9 @@ class LoginFragment : Fragment() {
         binding.tvRegisterclick.setOnClickListener {
             navController.navigate(R.id.action_loginFragment_to_registerFragment)
         }
+
+        binding.bLogin.setOnClickListener {
+            navController.navigate(R.id.action_loginFragment_to_nav_graph)
+        }
     }
 }

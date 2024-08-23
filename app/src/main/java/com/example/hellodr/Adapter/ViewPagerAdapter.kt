@@ -1,4 +1,4 @@
-package com.example.hellodr
+package com.example.hellodr.Adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

@@ -1,8 +1,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="Fragement.HomeFragment">
 
     <androidx.constraintlayout.widget.Guideline
@@ -37,24 +37,120 @@
         android:id="@+id/iv_profile"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        app:layout_constraintTop_toBottomOf="@id/gl_Top"
-        app:layout_constraintStart_toStartOf="@id/gl_Start"
         android:src="@drawable/ellipse"
-        />
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/gl_Top" />
 
     <TextView
         android:id="@+id/tv_hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_marginStart="10dp"
         android:text="@string/hi"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/gl_Top"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/iv_profile"
-        />
+        app:layout_constraintTop_toTopOf="@id/iv_profile" />
 
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ummar"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_hi"
+        app:layout_constraintTop_toTopOf="@id/iv_profile" />
+    />
 
+    <TextView
+        android:id="@+id/tv_patientId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Patient ID :"
+        android:textColor="@color/lightgrey"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_hi" />
 
+    <TextView
+        android:id="@+id/tv_patientNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5687213"
+        android:textColor="@color/lightgrey"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+        app:layout_constraintStart_toEndOf="@id/tv_patientId"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <ImageView
+        android:id="@+id/iv_hearticon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+        app:layout_constraintEnd_toStartOf="@id/iv_bellicon"
+        app:layout_constraintTop_toTopOf="@id/iv_profile" />
+
+    <ImageView
+        android:id="@+id/iv_bellicon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/notification"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintTop_toTopOf="@id/iv_profile" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:queryHint="Search"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile" />
+
+    <TextView
+        android:id="@+id/tv_upcomming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Upcoming Schedule"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/sv_search" />
+
+    <TextView
+        android:id="@+id/tv_seeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See All"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintTop_toTopOf="@+id/tv_upcomming" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        tools:itemCount="4"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/tv_seeAll"
+        tools:listitem="@layout/card_view_design"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
