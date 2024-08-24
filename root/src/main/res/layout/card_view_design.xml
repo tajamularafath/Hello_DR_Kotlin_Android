@@ -3,10 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/blue"
     android:layout_margin="5dp"
     app:cardCornerRadius="10dp"
-    android:backgroundTint="@color/blue">
+    android:backgroundTint="@color/lightBlue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,33 +13,40 @@
         >
 
         <TextView
-            android:id="@+id/img_1"
+            android:id="@+id/tv_doctorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Calendar"
+            android:text="Dr. Dominic Savio"
+            android:layout_marginTop="15sp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/img_3"
+            android:id="@+id/tv_specialist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Calendar"
+            android:text="Dermatologist"
+            android:textColor="@color/white"
+            android:layout_marginStart="15sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_1" />
+            app:layout_constraintTop_toBottomOf="@id/tv_doctorName" />
         <TextView
             android:id="@+id/img_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Calendar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_3" />
+            app:layout_constraintTop_toBottomOf="@id/tv_specialist" />
 
-        <ImageView
+        <But
             android:id="@+id/img_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/notification"
+            android:src="@drawable/doctor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
