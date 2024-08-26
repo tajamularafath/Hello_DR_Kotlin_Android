@@ -24,11 +24,12 @@ class BottomSheetFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottom_sheet, container, false)
+        binding = FragmentBottomSheetBinding.inflate(inflater,container,false)
+        val view = binding.root
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding = FragmentBottomSheetBinding.bind(view)
         super.onViewCreated(view, savedInstanceState)
 
         val homeFragment = HomeFragment()

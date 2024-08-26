@@ -152,5 +152,26 @@
         app:layout_constraintTop_toBottomOf="@id/tv_seeAll"
         tools:listitem="@layout/card_view_design"/>
 
+    <TextView
+        android:id="@+id/tv_categeory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categeories"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        />
+
+    <TextView
+        android:id="@+id/tv_CateseeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See All"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintTop_toTopOf="@+id/tv_categeory"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

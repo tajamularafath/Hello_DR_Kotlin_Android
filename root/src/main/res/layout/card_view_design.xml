@@ -34,16 +34,21 @@
             android:layout_marginStart="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_doctorName" />
-        <TextView
-            android:id="@+id/img_7"
+
+        <Button
+            android:id="@+id/b_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Calendar"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="Feb 24, 12:00AM"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:backgroundTint="#2799F8"
+            android:layout_marginTop="20sp"
+            app:layout_constraintStart_toStartOf="@id/tv_specialist"
             app:layout_constraintTop_toBottomOf="@id/tv_specialist" />
 
-        <But
-            android:id="@+id/img_2"
+        <ImageView
+            android:id="@+id/iv_drImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/doctor"

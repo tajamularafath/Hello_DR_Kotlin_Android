@@ -50,4 +50,8 @@ dependencies {
 
     // for adding cardview
     implementation("androidx.cardview:cardview:1.0.0")
+
+//    For Loading Images
+    implementation("io.coil-kt:coil:2.4.0") // Use the latest version
+
 }
