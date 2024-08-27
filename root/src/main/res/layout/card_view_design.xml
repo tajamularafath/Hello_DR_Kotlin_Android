@@ -44,13 +44,14 @@
             android:textSize="18sp"
             android:backgroundTint="#2799F8"
             android:layout_marginTop="20sp"
+            app:shapeAppearance="@null"
             app:layout_constraintStart_toStartOf="@id/tv_specialist"
             app:layout_constraintTop_toBottomOf="@id/tv_specialist" />
 
         <ImageView
             android:id="@+id/iv_drImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:src="@drawable/doctor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

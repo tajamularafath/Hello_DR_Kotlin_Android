@@ -1,6 +1,7 @@
 package Fragement
 
 import Adapter.HomeCardViewAdapter
+import Adapter.HomeCategeoryAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import com.example.root.R
 import com.example.root.databinding.FragmentBottomSheetBinding
 import com.example.root.databinding.FragmentHomeBinding
 import model.CardView
+import model.CatgeoryModel
 
 class HomeFragment : Fragment() {
 
@@ -32,16 +34,30 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+//        For Dr Avalibilty
         val recyclerView = binding.recyclerView
 
         val data = ArrayList<CardView>()
 
         for(i in 1..5){
-            data.add(CardView(R.drawable.doctor, "DR Ummar", "Heart", "Sep 24, 12:00AM"))
+            data.add(CardView(R.drawable.doctor, "DR Ummar", "Cardiology", "Sep 24, 12:00AM"))
         }
         val adapter = HomeCardViewAdapter(data)
         recyclerView.adapter = adapter
         adapter.notifyDataSetChanged()
+
+//        For Category
+        val cateRecyclerView = binding.rvCategeory
+        val cdata = ArrayList<CatgeoryModel>()
+        cdata.add(CatgeoryModel(R.drawable.cardiology, "Cardiology"))
+        cdata.add(CatgeoryModel(R.drawable.psychologist, "Psychologist"))
+        cdata.add(CatgeoryModel(R.drawable.quicktest, "Quick Test"))
+        cdata.add(CatgeoryModel(R.drawable.covid, "Covid 19"))
+
+        val cadapter = HomeCategeoryAdapter(cdata)
+        cateRecyclerView.adapter = cadapter
+        cadapter.notifyDataSetChanged()
     }
 
 

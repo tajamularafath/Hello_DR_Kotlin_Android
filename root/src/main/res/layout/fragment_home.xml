@@ -174,4 +174,29 @@
         app:layout_constraintEnd_toEndOf="@id/gl_End"
         app:layout_constraintTop_toTopOf="@+id/tv_categeory"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_categeory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:itemCount="4"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_categeory"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        tools:listitem="@layout/categeory_card_view"
+        />
+
+    <TextView
+        android:id="@+id/tv_drseeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See All"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        app:layout_constraintTop_toBottomOf="@+id/rv_categeory"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
