@@ -89,8 +89,8 @@
 
     <ImageView
         android:id="@+id/iv_hearticon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:src="@drawable/heart"
         app:layout_constraintBottom_toBottomOf="@id/iv_profile"
         app:layout_constraintEnd_toStartOf="@id/iv_bellicon"
@@ -98,8 +98,8 @@
 
     <ImageView
         android:id="@+id/iv_bellicon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:src="@drawable/notification"
         app:layout_constraintBottom_toBottomOf="@id/iv_profile"
         app:layout_constraintEnd_toEndOf="@id/gl_End"
@@ -176,7 +176,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_categeory"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:itemCount="4"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -198,5 +198,15 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@id/gl_End"
         app:layout_constraintTop_toBottomOf="@+id/rv_categeory"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_drseeAll"
+        app:layout_constraintStart_toStartOf="@id/gl_Start"
+        app:layout_constraintEnd_toEndOf="@id/gl_End"
+        tools:listitem="@layout/dr_card_view"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
