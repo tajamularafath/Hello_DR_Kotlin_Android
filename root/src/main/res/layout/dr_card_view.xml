@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:backgroundTint="@color/white"
@@ -13,8 +13,8 @@
 
         <ImageButton
             android:id="@+id/iv_dr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="74dp"
             android:src="@drawable/drm"
             android:backgroundTint="@color/lightgrey1"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,6 +43,30 @@
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/tv_drname"
             app:layout_constraintStart_toStartOf="@id/tv_drname"
+            />
+        <RatingBar
+            android:id="@+id/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_drhospital"
+            app:layout_constraintStart_toStartOf="@id/tv_drhospital"
+            android:stepSize="0.5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:rating="5"
+            android:isIndicator="false"
+            />
+        <TextView
+            android:id="@+id/tv_ratingcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(120)"
+            android:textSize="16sp"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_drhospital"
+            app:layout_constraintStart_toEndOf="@id/rb"
+            app:layout_constraintBottom_toBottomOf="@+id/rb"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

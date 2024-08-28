@@ -2,6 +2,7 @@ package Fragement
 
 import Adapter.HomeCardViewAdapter
 import Adapter.HomeCategeoryAdapter
+import Adapter.HomeDrListAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import com.example.root.databinding.FragmentBottomSheetBinding
 import com.example.root.databinding.FragmentHomeBinding
 import model.CardView
 import model.CatgeoryModel
+import model.DrListModel
 
 class HomeFragment : Fragment() {
 
@@ -58,7 +60,27 @@ class HomeFragment : Fragment() {
         val cadapter = HomeCategeoryAdapter(cdata)
         cateRecyclerView.adapter = cadapter
         cadapter.notifyDataSetChanged()
+
+//    For DR List
+        val drListRecyclerView = binding.rvDr
+        val drListData = ArrayList<DrListModel>()
+
+        drListData.add(DrListModel(R.drawable.drf,"","Psychologist • Apollo Hospital","120"))
+        drListData.add(DrListModel(R.drawable.drf,"","Psychologist • Apollo Hospital","120"))
+        drListData.add(DrListModel(R.drawable.drf,"","Psychologist • Apollo Hospital","120"))
+        drListData.add(DrListModel(R.drawable.drf,"","Psychologist • Apollo Hospital","120"))
+        drListData.add(DrListModel(R.drawable.drf,"","Psychologist • Apollo Hospital","120"))
+        drListData.add(DrListModel(R.drawable.drf,"","Psychologist • Apollo Hospital","120"))
+        drListData.add(DrListModel(R.drawable.drf,"","Psychologist • Apollo Hospital","120"))
+
+        val drListAdapter = HomeDrListAdapter(drListData)
+        drListRecyclerView.adapter = drListAdapter
+        drListAdapter.notifyDataSetChanged()
+
+
+
+
+
+
     }
-
-
 }
