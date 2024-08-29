@@ -6,9 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.root.R
 import com.example.root.databinding.DrCardViewBinding
+import model.CardView
 import model.DrListModel
 
-class HomeDrListAdapter(val drListModel: List<DrListModel>): RecyclerView.Adapter<HomeDrListAdapter.ViewHolder>() {
+class HomeDrListAdapter(var drListModel: List<DrListModel>): RecyclerView.Adapter<HomeDrListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = DrCardViewBinding
@@ -32,6 +33,11 @@ class HomeDrListAdapter(val drListModel: List<DrListModel>): RecyclerView.Adapte
             tvDrhospital.setText(itemViewModel.drHospital)
             tvRatingcount.setText(itemViewModel.ratingCount)
         }
+    }
+
+    fun updateData(newData: List<DrListModel>){
+        drListModel = newData
+        notifyDataSetChanged()
     }
 
    class ViewHolder(val binding: DrCardViewBinding): RecyclerView.ViewHolder(binding.root) {

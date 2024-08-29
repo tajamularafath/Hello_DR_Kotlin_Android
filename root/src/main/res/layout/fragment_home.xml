@@ -3,36 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Fragement.HomeFragment">
+    tools:context="Fragment.HomeFragment">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_Start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="10dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_End"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="10dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_Top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="10dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_Bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_Start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="10dp" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_End"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="10dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_Top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="10dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_Bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="16dp" />
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/iv_profile"
         android:layout_width="75dp"
@@ -196,17 +205,26 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@id/gl_End"
         app:layout_constraintTop_toBottomOf="@+id/rv_categeory" />
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/gl_Start"-->
+<!--        app:layout_constraintStart_toStartOf="@id/gl_End"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_drseeAll">-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_dr"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
+        tools:itemCount="4"
         app:layout_constraintEnd_toEndOf="@id/gl_End"
         app:layout_constraintStart_toStartOf="@id/gl_Start"
         app:layout_constraintTop_toBottomOf="@id/tv_drseeAll"
         app:layout_constraintBottom_toBottomOf="@id/gl_Bottom"
         tools:listitem="@layout/dr_card_view" />
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

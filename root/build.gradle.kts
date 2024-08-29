@@ -54,4 +54,7 @@ dependencies {
 //    For Loading Images
     implementation("io.coil-kt:coil:2.4.0") // Use the latest version
 
+//    For ViewModel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+
 }

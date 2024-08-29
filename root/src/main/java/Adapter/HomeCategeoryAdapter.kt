@@ -8,7 +8,7 @@ import com.example.root.R
 import com.example.root.databinding.CategeoryCardViewBinding
 import model.CatgeoryModel
 
-class HomeCategeoryAdapter(private val cList: List<CatgeoryModel>): RecyclerView.Adapter<HomeCategeoryAdapter.ViewHolder>() {
+class HomeCategeoryAdapter(private var cList: List<CatgeoryModel>): RecyclerView.Adapter<HomeCategeoryAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding= CategeoryCardViewBinding
@@ -31,6 +31,10 @@ class HomeCategeoryAdapter(private val cList: List<CatgeoryModel>): RecyclerView
             tvCate.setText(itemViewModel.ctText)
         }
 
+    }
+    fun updateData(newData:List<CatgeoryModel>){
+        cList = newData
+        notifyDataSetChanged()
     }
 
     class ViewHolder(val binding: CategeoryCardViewBinding): RecyclerView.ViewHolder(binding.root) {

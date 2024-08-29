@@ -9,7 +9,7 @@ import com.example.root.R
 import com.example.root.databinding.CardViewDesignBinding
 import model.CardView
 
-class HomeCardViewAdapter(private val cList: List<CardView>): RecyclerView.Adapter<HomeCardViewAdapter.ViewHolder>() {
+class HomeCardViewAdapter(private var cList: List<CardView>): RecyclerView.Adapter<HomeCardViewAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,6 +33,11 @@ class HomeCardViewAdapter(private val cList: List<CardView>): RecyclerView.Adapt
             tvSpecialist.setText(itemViewModel.dSpecialist)
             bTime.setText(itemViewModel.time)
         }
+    }
+
+    fun updateData(newData: List<CardView>){
+        cList = newData
+        notifyDataSetChanged()
     }
 
 

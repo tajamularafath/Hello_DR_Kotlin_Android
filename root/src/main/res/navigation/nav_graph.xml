@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="Fragement.HomeFragment"
+        android:name="Fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="Fragement.CalendarFragment"
+        android:name="Fragment.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="Fragement.ProfileFragment"
+        android:name="Fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/messageFragment"
-        android:name="Fragement.MessageFragment"
+        android:name="Fragment.MessageFragment"
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" />
     <fragment
         android:id="@+id/bottomSheetFragment"
-        android:name="Fragement.BottomSheetFragment"
+        android:name="Fragment.BottomSheetFragment"
         android:label="fragment_bottom_sheet"
         tools:layout="@layout/fragment_bottom_sheet" >
         <action
