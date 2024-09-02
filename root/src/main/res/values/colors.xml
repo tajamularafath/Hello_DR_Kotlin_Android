@@ -9,5 +9,11 @@
     <color name="litewhite">#F6F9FE</color>
     <color name="lightgrey">#93A4BB</color>
     <color name="lightgrey1">#D0E4FF</color>
+    <color name="red">#FA3B04</color>
+    <style name="CustomTabTitle" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/rubik_light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 
 </resources>

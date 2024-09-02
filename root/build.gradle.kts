@@ -57,4 +57,10 @@ dependencies {
 //    For ViewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
 
+//    For Material Design
+    implementation(libs.material.v180)
+
+//    For ViewPager
+    implementation ("androidx.viewpager2:viewpager2:1.1.0")
+
 }
