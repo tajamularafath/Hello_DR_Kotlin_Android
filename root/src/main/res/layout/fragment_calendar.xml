@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     tools:context="Fragment.CalendarFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/gl_Start"
@@ -73,8 +73,8 @@
                 app:layout_constraintStart_toStartOf="@id/gl_Start"
                 app:layout_constraintTop_toBottomOf="@id/tv_myAppoinment"
                 app:layout_constraintVertical_bias="0.0"
-                app:tabIndicatorColor="@color/red"
-                app:tabSelectedTextColor="@color/red"
+                app:tabIndicatorColor="@color/blue"
+                app:tabSelectedTextColor="@color/blue"
                 android:background="@color/white"
                 app:tabTextAppearance="@style/CustomTabTitle"
                 app:tabTextColor="@color/black"/>
@@ -89,17 +89,21 @@
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/view_pager_calendar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/gl_Bottom"
                 app:layout_constraintTop_toBottomOf="@id/tab_layout_calendar"
                 app:layout_constraintStart_toStartOf="@id/gl_Start"
-                app:layout_constraintEnd_toEndOf="@id/gl_End"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                app:layout_constraintEnd_toEndOf="@id/gl_End"/>
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rv_"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tab_layout_calendar"-->
+<!--                app:layout_constraintStart_toStartOf="@id/gl_Start"-->
+<!--                app:layout_constraintEnd_toEndOf="@id/gl_End"-->
+<!--                />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </ScrollView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

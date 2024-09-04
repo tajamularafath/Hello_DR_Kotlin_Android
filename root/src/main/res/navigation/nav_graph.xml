@@ -43,4 +43,46 @@
             android:id="@+id/action_rootFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="Fragment.UpcomingFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming" >
+        <action
+            android:id="@+id/action_upcomingFragment_to_cancelledFragment"
+            app:destination="@id/cancelledFragment" />
+        <action
+            android:id="@+id/action_upcomingFragment_to_completedFragment"
+            app:destination="@id/completedFragment" />
+        <action
+            android:id="@+id/action_upcomingFragment_to_completedFragment2"
+            app:destination="@id/completedFragment" />
+        <action
+            android:id="@+id/action_upcomingFragment_to_completedFragment3"
+            app:destination="@id/completedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedFragment"
+        android:name="Fragment.CompletedFragment"
+        android:label="fragment_completed"
+        tools:layout="@layout/fragment_completed" >
+        <action
+            android:id="@+id/action_completedFragment_to_upcomingFragment"
+            app:destination="@id/upcomingFragment" />
+        <action
+            android:id="@+id/action_completedFragment_to_cancelledFragment"
+            app:destination="@id/cancelledFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancelledFragment"
+        android:name="Fragment.CancelledFragment"
+        android:label="fragment_cancelled"
+        tools:layout="@layout/fragment_cancelled" >
+        <action
+            android:id="@+id/action_cancelledFragment_to_upcomingFragment"
+            app:destination="@id/upcomingFragment" />
+        <action
+            android:id="@+id/action_cancelledFragment_to_completedFragment"
+            app:destination="@id/completedFragment" />
+    </fragment>
 </navigation>
