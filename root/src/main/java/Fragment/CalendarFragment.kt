@@ -47,30 +47,30 @@ class CalendarFragment : Fragment() {
         viewPager.adapter = adapter
 
         // Adding a TabSelectedListener to perform navigation actions when a tab is selected
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                when (tab.position) {
-                    0 -> {
-                        // Navigate when the Upcoming tab is selected
-                        navController.navigate(R.id.action_upcomingFragment_to_completedFragment)
-                    }
-                    1 -> {
-                        // Navigate when the Completed tab is selected
-                        navController.navigate(R.id.action_upcomingFragment_to_completedFragment)
-                    }
-                    2 -> {
-                        // Navigate when the Cancelled tab is selected
-                        navController.navigate(R.id.action_cancelledFragment_to_upcomingFragment)
-                    }
-                }
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-            }
-        })
+//        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+//            override fun onTabSelected(tab: TabLayout.Tab) {
+//                when (tab.position) {
+//                    0 -> {
+//                        // Navigate when the Upcoming tab is selected
+//                        navController.navigate(R.id.action_upcomingFragment_to_completedFragment)
+//                    }
+//                    1 -> {
+//                        // Navigate when the Completed tab is selected
+//                        navController.navigate(R.id.action_upcomingFragment_to_completedFragment)
+//                    }
+//                    2 -> {
+//                        // Navigate when the Cancelled tab is selected
+//                        navController.navigate(R.id.action_cancelledFragment_to_upcomingFragment)
+//                    }
+//                }
+//            }
+//
+//            override fun onTabUnselected(tab: TabLayout.Tab?) {
+//            }
+//
+//            override fun onTabReselected(tab: TabLayout.Tab?) {
+//            }
+//        })
 
 
 //         Setup TabLayout with ViewPager2
@@ -81,6 +81,8 @@ class CalendarFragment : Fragment() {
                 2 -> "Cancelled"
                 else -> null
             }
-        }
+        }.attach()
+//        tabLayout.setupWithViewPager2(viewPager);
+
     }
 }
